@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Montagu+Slab:opsz,wght@16..144,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+body {
+    width: 100vw;
+    height: 200vh;
+    margin: 0;
+    overflow: visible;
+    background-color: rgb(12, 12, 12)
+}
+nav {
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    height: 5rem;
+    background-color: rgb(12, 12, 12);
+    z-index: 1;
+}
+ul {
+    display: grid;
+    align-items: baseline;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: 100vw;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    transform: translateY(25%);
+    list-style-type: none;
+}
+li {
+    position: relative;
+}
+a {
+    text-decoration: none;
+    color: rgb(249, 242, 234);
+}
+.menu-title {
+    font-size: 2.25rem;
+    font-family: "VT323", monospace;
+    margin-bottom: 50px;
+}
+.nav2 {
+    grid-area: 1 / 2 / 2 / 4;
+    text-align: center;
+}
+canvas { 
+    display: block; 
+}
+#model {
+    z-index: 9;
+}
