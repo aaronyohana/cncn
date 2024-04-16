@@ -1,0 +1,32 @@
+# Blender 4.1.0 MTL File: 'avatar_clothed.blend'
+# www.blender.org
+
+newmtl Material
+Ns 92.156860
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd /Users/aaronyohana/Downloads/Deftones_(Logo).png
+
+newmtl default
+Ns 52.245846
+Ka 0.350000 0.350000 0.350000
+Kd 0.512000 0.512000 0.512000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 3
+
+newmtl jeans
+Ns 92.156860
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd /Users/aaronyohana/Desktop/code guff/cn-cn copy/body.png
