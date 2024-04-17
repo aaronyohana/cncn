@@ -35,6 +35,12 @@
             }
         }
     </script>
+    <script>
+        document.getElementById("contact").addEventListener('click', slide);
+        function slide() {
+            document.getElementsByClassName("menu-title").classList.toggle("slide");
+        }
+    </script>
     <body>
         <nav>
             <ul>
@@ -54,11 +60,14 @@
                 <div class="nav2">
                     <li><a class="menu-title" href="./index.html">cn if i cn bleed</a></li>
                 </div>
-                <li class="nav3"><a class="menu-options" href="./index.html">contact</a></li>
+                <li class="nav3"><a id="contact" class="menu-options">contact</a></li>
             </ul>
         </nav>
-        <div id="box">
-            <script type="module" src="./js/main.js"></script>
-        </div>
+        <main>
+            <div id="box">
+                <script type="module" src="./js/main.js"></script>
+            </div>
+        </main>
+        <div id="contact-info"> cn if i cn bleed (seein' if i can bleed)<br>by aaron yohana<br><br>email : aaronyohana04@gmail.com </div>
     </body>
 </html>
