@@ -6,7 +6,7 @@ const scene = new THREE.Scene();
 scene.background = new THREE.Color( 0x0C0C0C );
 const camera = new THREE.PerspectiveCamera(60, 1, 0.1, 1000);
 camera.position.z = 8;
-camera.position.x = 2.2;
+camera.position.x = 2.75;
 const renderer = new THREE.WebGLRenderer({ antialias: true});
 
 renderer.setPixelRatio(window.devicePixelRatio);
@@ -17,7 +17,8 @@ const geometry1 = new THREE.TorusKnotGeometry( 1, 0.4, 128, 12, 2, 3);
 const edges1 = new THREE.EdgesGeometry(geometry1); 
 const line1 = new THREE.LineSegments(edges1, new THREE.LineBasicMaterial({color: 0x00ff00})); 
 scene.add(line1);
-line1.position.y = 2;
+line1.position.y = 2.75;
+line1.position.z = -2;
 /*const geometry2 = new THREE.TorusKnotGeometry( 1, 0.4, 128, 12, 2, 3);
 const edges2 = new THREE.EdgesGeometry(geometry2); 
 const line2 = new THREE.LineSegments(edges2, new THREE.LineBasicMaterial({color: 0xffff00})); 
@@ -41,7 +42,7 @@ function onWindowResize() {
 }
 renderer.setSize(window.innerWidth, window.innerWidth);
 
-document.getElementById("contact").addEventListener('click', openContact);
+document.getElementById("box").addEventListener('click', openContact);
 function openContact() {
     speed = .1;
 	document.getElementById("box").style.transition = "transform 2s";
