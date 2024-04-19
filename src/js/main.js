@@ -47,6 +47,10 @@ function openContact() {
     speed = .1;
 	document.getElementById("box").style.transition = "transform 2s";
 	document.getElementById("box").style.transform = "translateX(-50%)";
+	document.getElementById("message").style.transition = "opacity 2s ease-in 500ms";
+	document.getElementById("message").style.opacity = "1";
+	document.getElementById("message").style.transition = "filter 2s cubic-bezier(.41,.12,.73,.99)";
+	document.getElementById("message").style.filter = "blur(0rem)";
 }
 
 function animate() {
