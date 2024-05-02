@@ -19,11 +19,6 @@ const line1 = new THREE.LineSegments(edges1, new THREE.LineBasicMaterial({color:
 scene.add(line1);
 line1.position.y = 2.75;
 line1.position.z = -2;
-/*const geometry2 = new THREE.TorusKnotGeometry( 1, 0.4, 128, 12, 2, 3);
-const edges2 = new THREE.EdgesGeometry(geometry2); 
-const line2 = new THREE.LineSegments(edges2, new THREE.LineBasicMaterial({color: 0xffff00})); 
-scene.add(line2);*/
-/*line2.position.y = 4;*/
 
 var speed = 0.005;
 container.onclick = function(event) {

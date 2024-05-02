@@ -1,18 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Montagu+Slab:opsz,wght@16..144,100..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+:root {
+    --green: #00FF00;
+    --black: #0C0C0C;
+    --yellow: #FFFF00;
+    --white: #F9F2EA;
+}
 body {
     width: 100vw;
     height: 200vh;
     margin: 0;
     overflow: visible;
-    background-color: rgb(12, 12, 12)
+    background-color: var(--black);
 }
 nav {
     position: sticky;
     top: 0;
     width: 100vw;
-    height: 5rem;
-    background-color: rgb(12, 12, 12);
+    height: 10vh;
+    background-color: var(--black);
     z-index: 1;
 }
 ul {
@@ -33,20 +39,117 @@ li {
 }
 a {
     text-decoration: none;
-    color: rgb(249, 242, 234);
+    color: var(--white);
 }
-.menu-title {
-    font-size: 2.25rem;
-    font-family: "VT323", monospace;
-    margin-bottom: 50px;
+.menu-options:hover {
+    transition: 300ms;
+    background-color: var(--yellow);
+    color: var(--black);
+}
+#logo {
+    width: 40px;
+    height: 40px;
+}
+/* FOR DESKTOP */
+@media screen and (min-width: 551px) {
+    .menu-title {
+        font-size: 2.2rem;
+        font-family: "VT323", monospace;
+        margin-bottom: 50px;
+    }
+    .menu-options {
+        font-size: 1rem;
+        font-family: "Montagu Slab", serif;
+    }
+    .nav1 {
+        grid-area: 1 / 1 / 2 / 2;
+        padding-left: 5vw;
+        display: flex;
+        justify-content: space-between;
+    }
+    .dropdown {
+        visibility: hidden;
+    }
+}
+/* FOR PHONE */
+@media only screen and (max-width: 550px) {
+    .menu-title {
+        font-size: 1.5rem;
+        font-family: "VT323", monospace;
+        margin-bottom: 50px;
+    }
+    .menu-options {
+        font-size: 0.75rem;
+        font-family: "Montagu Slab", serif;
+    }
+    .nav1 {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+    .nav3 {
+        visibility: hidden;
+    }
+
+    .dropbtn {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-left: 5vw;
+        background-image: url("../images/dropdown.png");
+        transform: translateY(5px);
+        border: none;
+        cursor: pointer;
+    }
+    
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: var(--black);
+        min-width: 160px;
+        z-index: 1;
+        transform: translateY(10px);
+    }
+    
+    .dropdown-content a {
+        padding-top: 1vh;
+        margin-left: 5vw;
+        color: var(--white);
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {background-color: var(--yellow);}
+    .show {display:block;}
 }
 .nav2 {
     grid-area: 1 / 2 / 2 / 4;
     text-align: center;
 }
-canvas { 
-    display: block; 
+.nav3 {
+    grid-area: 1 / 4 / 2 / 5;
+    padding-right: 5vw;
+    text-align: right;
+}
+main {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 15vh;
+    width: 100%;
+    height: 50vw;
+    background-color: var(--black);
 }
 #model {
-    z-index: 9;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    height: 50vw;
+    padding: 0;
+    background-color: var(--yellow);
 }
