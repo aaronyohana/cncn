@@ -8,7 +8,7 @@
 }
 body {
     width: 100vw;
-    height: 200vh;
+    height: 100vh;
     margin: 0;
     overflow: visible;
     background-color: rgb(12, 12, 12);
@@ -70,38 +70,45 @@ a {
     .dropdown {
         visibility: hidden;
     }
-    .items {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr; 
-        gap: 10px;
-        background-color: var(--black);
+    main {
         width: 90vw;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .item { 
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(5, 1fr);
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
-        aspect-ratio: 4/5;
-        color: var(--white);
-    }
-    .item-desc {
-        grid-area: 5 / 1 / 6 / 5;
-    }
-    .item h3{
+        height: 50vw;
+        padding-top: 10vh;
         margin: 0 auto 0 auto;
-        font-size: 1.25rem;
-        font-family: "VT323", monospace;
-        width: fit-content;
+        display: flex;
+        align-items: center;
     }
-    .item p{
-        margin: 0 0 10px 0;
-        font-size: 1rem;
+    .product-img {
+        width: 50vw;
+        height: 50vw;
+    }
+    .product {
+        padding-left: 10vw;
+        margin-top: -30px;
+        color: var(--white)
+    }
+    .product h1{
         font-family: "VT323", monospace;
+        font-size: 2rem;
         text-align: center;
+    }
+    .product h3{
+        font-family: "VT323", monospace;
+        font-size: 1rem;
+        text-align: center;
+        margin-top: -15px;
+    }
+    .product button{
+        height: 30px;
+        width: 100px;
+        font-family: "Montagu Slab", serif;
+        font-size: .5rem;
+        transform: translateX(34%);
+        border-radius: 20px;
+        border: 1px solid var(--green);
+        background-color: var(--black);
+        color: var(--green);
+        cursor: pointer;
     }
 }
 /* FOR PHONE */
@@ -163,63 +170,44 @@ a {
     /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
     .show {display:block;}
 
-    .items {
-        display: grid;
-        grid-template-columns: 1fr 1fr; 
-        gap: 10px;
-        background-color: var(--black);
-        width: 90vw;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .item { 
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(5, 1fr);
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
-        aspect-ratio: 4/5;
-        color: var(--white);
-    }
-    .item-desc {
-        grid-area: 5 / 1 / 6 / 5;
-    }
-    .item h3{
+    main {
         margin: 0 auto 0 auto;
-        font-size: 1.25rem;
-        font-family: "VT323", monospace;
-        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-    .item p{
-        margin: 0 0 10px 0;
-        font-size: 1rem;
+    .product-img {
+        width: 85vw;
+        height: 85vw;
+    }
+    .product {
+        color: var(--white)
+    }
+    .product h1{
         font-family: "VT323", monospace;
+        font-size: 2rem;
         text-align: center;
     }
-}
-.item a{
-    grid-area: 1 / 1 / 6 / 5; 
-    width: 100%;
-    height: 100%;
-    text-decoration: none; /* No underlines on the link */
-    z-index: 10; /* Places the link above everything else in the div */
-    background-color: #FFF; /* Fix to make div clickable in IE */
-    opacity: 0; /* Fix to make div clickable in IE */
-    filter: alpha(opacity=1); /* Fix to make div clickable in IE */
-}
-.item img {
-    grid-area: 1 / 1 / 5 / 5;
-    object-fit: contain;
-    width: 100%;
-    height: 100%;
-}
-.item:hover {
-    cursor: pointer;
-}
-.item:hover h3{
-    color: var(--black);
-    background-color: yellow;
-    transition: 300ms;
+    .product h3{
+        font-family: "VT323", monospace;
+        font-size: 1rem;
+        text-align: center;
+        margin-top: -15px;
+    }
+    .product button{
+        height: 30px;
+        width: 100px;
+        font-family: "Montagu Slab", serif;
+        font-size: .5rem;
+        transform: translateX(34%);
+        border-radius: 20px;
+        border: 1px solid var(--green);
+        background-color: var(--black);
+        color: var(--green);
+        cursor: pointer;
+        text-shadow: 0 0 .5vw rgba(0, 255, 0, 0.5);
+        box-shadow: 0 0 .5vw rgba(0, 255, 0, 0.5);
+    }
 }
 .nav2 {
     grid-area: 1 / 2 / 2 / 4;
