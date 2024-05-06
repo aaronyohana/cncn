@@ -98,12 +98,28 @@ a {
         text-align: center;
         margin-top: -15px;
     }
+    .product-input {
+        height: 30px;
+        width: 100%;
+    }
+    .product select{
+        height: 30px;
+        width:  30px;
+        font-family: "Montagu Slab", serif;
+        font-size: .5rem;
+        border-radius: 50%;
+        border: 1px solid var(--green);
+        background-color: var(--black);
+        color: var(--green);
+        cursor: pointer;
+        text-shadow: 0 0 .5vw rgba(0, 255, 0, 0.5);
+        box-shadow: 0 0 .5vw rgba(0, 255, 0, 0.5);
+    }
     .product button{
         height: 30px;
         width: 100px;
         font-family: "Montagu Slab", serif;
         font-size: .5rem;
-        transform: translateX(34%);
         border-radius: 20px;
         border: 1px solid var(--green);
         background-color: var(--black);
@@ -194,12 +210,28 @@ a {
         text-align: center;
         margin-top: -15px;
     }
+    .product-input {
+        height: 30px;
+        width: 100%;
+    }
+    .product select{
+        height: 30px;
+        width:  30px;
+        font-family: "Montagu Slab", serif;
+        font-size: .5rem;
+        border-radius: 50%;
+        border: 1px solid var(--green);
+        background-color: var(--black);
+        color: var(--green);
+        cursor: pointer;
+        text-shadow: 0 0 .5vw rgba(0, 255, 0, 0.5);
+        box-shadow: 0 0 .5vw rgba(0, 255, 0, 0.5);
+    }
     .product button{
         height: 30px;
         width: 100px;
         font-family: "Montagu Slab", serif;
         font-size: .5rem;
-        transform: translateX(34%);
         border-radius: 20px;
         border: 1px solid var(--green);
         background-color: var(--black);
