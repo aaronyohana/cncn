@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Montagu+Slab:opsz,wght@16..144,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+:root {
+    --green: #00FF00;
+    --black: #0C0C0C;
+    --yellow: #FFFF00;
+    --white: #F9F2EA;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    overflow: visible;
+    background-color: rgb(12, 12, 12);
+}
+nav {
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    height: 10vh;
+    background-color: rgb(12, 12, 12);
+    z-index: 1;
+}
+ul {
+    display: grid;
+    align-items: baseline;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: 100vw;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    transform: translateY(25%);
+    list-style-type: none;
+}
+li {
+    position: relative;
+}
+a {
+    text-decoration: none;
+    color: rgb(249, 242, 234);
+}
+.menu-options:hover {
+    transition: 300ms;
+    background-color: yellow;
+    color: rgb(12,12,12);
+}
+#logo {
+    width: 40px;
+    height: 40px;
+}
+/* FOR DESKTOP */
+@media screen and (min-width: 551px) {
+    .menu-title {
+        font-size: 2.2rem;
+        font-family: "VT323", monospace;
+        margin-bottom: 50px;
+    }
+    .menu-options {
+        font-size: 1rem;
+        font-family: "Montagu Slab", serif;
+    }
+    .nav1 {
+        grid-area: 1 / 1 / 2 / 2;
+        padding-left: 5vw;
+        display: flex;
+        justify-content: space-between;
+    }
+    .dropdown {
+        visibility: hidden;
+    }
+    main {
+        width: 90vw;
+        height: 50vw;
+        padding-top: 10vh;
+        margin: 0 auto 0 auto;
+        display: flex;
+        align-items: center;
+    }
+    .product-img {
+        width: 50vw;
+        height: 50vw;
+    }
+    .product {
+        padding-left: 10vw;
+        margin-top: -30px;
+        color: var(--white)
+    }
+    .product h1{
+        font-family: "VT323", monospace;
+        font-size: 2rem;
+        text-align: center;
+    }
+    .product h3{
+        font-family: "VT323", monospace;
+        font-size: 1rem;
+        text-align: center;
+        margin-top: -15px;
+    }
+    .product-input {
+        height: 30px;
+        width: 100%;
+    }
+    .product select{
+        height: 30px;
+        width:  30px;
+        font-family: "Montagu Slab", serif;
+        font-size: .5rem;
+        border-radius: 50%;
+        border: 1px solid var(--green);
+        background-color: var(--black);
+        color: var(--green);
+        cursor: pointer;
+        text-shadow: 0 0 .5vw rgba(0, 255, 0, 0.5);
+        box-shadow: 0 0 .5vw rgba(0, 255, 0, 0.5);
+    }
+    .product button{
+        height: 30px;
+        width: 100px;
+        font-family: "Montagu Slab", serif;
+        font-size: .5rem;
+        border-radius: 20px;
+        border: 1px solid var(--green);
+        background-color: var(--black);
+        color: var(--green);
+        cursor: pointer;
+    }
+}
+/* FOR PHONE */
+@media only screen and (max-width: 550px) {
+    .menu-title {
+        font-size: 1.5rem;
+        font-family: "VT323", monospace;
+        margin-bottom: 50px;
+    }
+    .menu-options {
+        font-size: 0.75rem;
+        font-family: "Montagu Slab", serif;
+    }
+    .nav1 {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+    .nav3 {
+        visibility: hidden;
+    }
+        /* Dropdown Button */
+    .dropbtn {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-left: 5vw;
+        background-image: url("../images/dropdown.png");
+        transform: translateY(5px);
+        border: none;
+        cursor: pointer;
+    }
+    
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: var(--black);
+        min-width: 160px;
+        z-index: 1;
+        transform: translateY(10px);
+    }
+    
+    /* Links inside the dropdown */
+    .dropdown-content a {
+        padding-top: 1vh;
+        margin-left: 5vw;
+        color: var(--white);
+        text-decoration: none;
+        display: block;
+    }
+    
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {background-color: yellow;}
+    
+    /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+    .show {display:block;}
+
+    main {
+        margin: 0 auto 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .product-img {
+        width: 85vw;
+        height: 85vw;
+    }
+    .product {
+        color: var(--white)
+    }
+    .product h1{
+        font-family: "VT323", monospace;
+        font-size: 2rem;
+        text-align: center;
+    }
+    .product h3{
+        font-family: "VT323", monospace;
+        font-size: 1rem;
+        text-align: center;
+        margin-top: -15px;
+    }
+    .product-input {
+        height: 30px;
+        width: 100%;
+    }
+    .product select{
+        height: 30px;
+        width:  30px;
+        font-family: "Montagu Slab", serif;
+        font-size: .5rem;
+        border-radius: 50%;
+        border: 1px solid var(--green);
+        background-color: var(--black);
+        color: var(--green);
+        cursor: pointer;
+        text-shadow: 0 0 .5vw rgba(0, 255, 0, 0.5);
+        box-shadow: 0 0 .5vw rgba(0, 255, 0, 0.5);
+    }
+    .product button{
+        height: 30px;
+        width: 100px;
+        font-family: "Montagu Slab", serif;
+        font-size: .5rem;
+        border-radius: 20px;
+        border: 1px solid var(--green);
+        background-color: var(--black);
+        color: var(--green);
+        cursor: pointer;
+        text-shadow: 0 0 .5vw rgba(0, 255, 0, 0.5);
+        box-shadow: 0 0 .5vw rgba(0, 255, 0, 0.5);
+    }
+}
+.nav2 {
+    grid-area: 1 / 2 / 2 / 4;
+    text-align: center;
+}
+.nav3 {
+    grid-area: 1 / 4 / 2 / 5;
+    padding-right: 5vw;
+    text-align: right;
+}

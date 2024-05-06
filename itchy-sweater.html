@@ -1,0 +1,70 @@
+<!DOCTYPE html> 
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../css/itchy-sweater.css">
+        <title>itchy sweater - cncn</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <script>
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+    <body>
+        <nav>
+            <ul>
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn"></button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a class="menu-options" href="../index.html">home</a>
+                        <a class="menu-options" href="../mag.html">mag</a>
+                        <a class="menu-options" href="../store.html">store</a>
+                        <a class="menu-options">contact</a>
+                    </div>
+                </div>
+                <div class="nav1">
+                    <li><a class="menu-options" href="../index.html">home</a></li>
+                    <li><a class="menu-options" href="../mag.html">mag</a></li>
+                    <li><a class="menu-options" href="../store.html">store</a></li>
+                </div>
+                <div class="nav2">
+                    <li><a class="menu-title" href="../index.html">cn if i cn bleed</a></li>
+                </div>
+                <li class="nav3"><a id="contact" class="menu-options">contact</a></li>
+            </ul>
+        </nav>
+        <main>
+            <img class=product-img src="../images/itchy_sweatshirt.jpg">
+            <div class="product">
+                <h1>ITCHY SWEATER</h1>
+                <h3>$399.99</h3>
+                <div class="product-input">
+                    <select>
+                        <option value="small">s</option>
+                        <option value="medium">m</option>
+                        <option value="large">l</option>
+                        <option value="extra-large">xl</option>
+                    </select>
+                    <button>add to cart</button>
+                </div>
+                <p></p>
+            </div>
+        </main>
+    </body>
+</html>
