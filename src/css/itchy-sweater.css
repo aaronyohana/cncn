@@ -99,10 +99,18 @@ a {
         margin-top: -15px;
     }
     .product-input {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
         height: 30px;
         width: 100%;
     }
     .product select{
+        grid-area: 1 / 1 / 2 / 2;
+        appearance: none;
+        text-align: center;
         height: 30px;
         width:  30px;
         font-family: "Montagu Slab", serif;
@@ -116,6 +124,7 @@ a {
         box-shadow: 0 0 .5vw rgba(0, 255, 0, 0.5);
     }
     .product button{
+        grid-area: 1 / 2 / 2 / 5;
         height: 30px;
         width: 100px;
         font-family: "Montagu Slab", serif;
@@ -125,6 +134,8 @@ a {
         background-color: var(--black);
         color: var(--green);
         cursor: pointer;
+        text-shadow: 0 0 .5vw rgba(0, 255, 0, 0.5);
+        box-shadow: 0 0 .5vw rgba(0, 255, 0, 0.5);
     }
 }
 /* FOR PHONE */
@@ -212,9 +223,16 @@ a {
     }
     .product-input {
         height: 30px;
-        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
     }
     .product select{
+        appearance: none;
+        grid-area: 1 / 1 / 2 / 2;
+        text-align: center;
         height: 30px;
         width:  30px;
         font-family: "Montagu Slab", serif;
@@ -228,6 +246,7 @@ a {
         box-shadow: 0 0 .5vw rgba(0, 255, 0, 0.5);
     }
     .product button{
+        grid-area: 1 / 2 / 2 / 5;
         height: 30px;
         width: 100px;
         font-family: "Montagu Slab", serif;

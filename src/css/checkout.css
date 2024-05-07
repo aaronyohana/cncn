@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Montagu+Slab:opsz,wght@16..144,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+:root {
+    --green: #00FF00;
+    --black: #0C0C0C;
+    --yellow: #FFFF00;
+    --white: #F9F2EA;
+}
+body {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;  
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    overflow: visible;
+    background-color: rgb(12, 12, 12);
+}
+li {
+    position: relative;
+}
+a {
+    text-decoration: none;
+    color: rgb(249, 242, 234);
+}
+/* FOR DESKTOP */
+@media screen and (min-width: 551px) {
+    .checkout-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-area: 1 / 1 / 2 / 4;
+        color: var(--white);
+    }
+    .checkout-items {
+        background-color: rgb(20, 20, 20);
+        grid-area: 1 / 4 / 2 / 6;
+    }
+}
+/* FOR PHONE */
+@media only screen and (max-width: 550px) {
+    .checkout-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-area: 1 / 1 / 2 / 6;
+        color: var(--white);
+    }
+    .checkout-items {
+        visibility: hidden;
+    }
+
+}
+::placeholder {
+    font-size: .75rem;
+    font-family: "Montagu Slab", serif;
+    padding-left: 5px;
+}
+.contact-info {
+    width: 75%;
+}
+.checkout-info label {
+    font-family: "Montagu Slab", serif;
+    font-size: .75rem;
+}
+.checkout-info input {
+    font-family: "Montagu Slab", serif;
+    height: 2rem;
+    padding: 0;
+    margin: 5px 0 0 0;
+    border: 1px dotted var(--white);
+    border-radius: 10px;
+    color: var(--white);
+    background-color: var(--black);
+    padding-left: 5px;
+    margin-right: -7px;
+    overflow: scroll;
+}
+#email {
+    width: 100%;
+}
+#email-notifs {
+    width: .5rem;
+    height: .5rem;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.shipping-info {
+    width: 75%;
+    text-align: left;
+    margin-top: 20px;
+}
+.name-label {
+    display: flex;
+    justify-content: space-between;
+}
+.name-label input {
+    width: 49%;
+}
+#address {
+    width: 100%;
+}
+#apartment {
+    width: 100%;
+}
+.location-label {
+    display: flex;
+    justify-content: space-between;
+}
+.location-label input {
+    width: 32%;
+}
+.payment-label {
+    display: flex;
+    font-family: "Montagu Slab", serif;
+    width: 75%;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+#return-btn {
+    font-size: .75rem;
+}
+#continue-btn {
+    font-size: .75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 2rem;
+    color: var(--black);
+    background-color: var(--green);
+    border: 1px solid var(--green);
+    box-shadow: 0 0 2vw rgba(0, 255, 0, 0.5);
+    border-radius: 10px;
+    transform: translateX(7px);
+}
+.menu-title {
+    height: 2rem;
+    font-size: 2rem;
+    font-family: "VT323", monospace;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}

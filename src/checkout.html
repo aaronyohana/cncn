@@ -1,0 +1,61 @@
+<!DOCTYPE html> 
+
+<html>
+    <head>
+        <link rel="stylesheet" href="css/checkout.css">
+        <title>cncn - store</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <script>
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+    <body>
+        <div class="checkout-info">
+            <a class="menu-title" href="./index.html">cn if i cn bleed</a>
+            <div class="contact-info">
+                <label for="email">contact</label>
+                <input type="email" id="email" name="email" placeholder="email">
+                <label id="email-notifs-label" for="email-notifs">email me with news and offers!</label>
+                <input type="checkbox" id="email-notifs" name="email-notifs">
+            </div>
+            <div class="shipping-info">
+                <label for="shipping-info">shipping address<br></label>
+                <div class="name-label">
+                    <input type="text" id="first-name" name="first-name" placeholder="first name">
+                    <input type="text" id="last-name" name="last-name" placeholder="last name">
+                </div>
+                <input type="text" id="address" name="address" placeholder="address">
+                <input type="text" id="apartment" name="apartment" placeholder="apartment, suite, etc. (optional)">
+                <div class="location-label">
+                    <input type="text" id="city" name="city" placeholder="city">
+                    <input type="text" id="state" name="state" placeholder="state">
+                    <input type="text" id="zip-code" name="zip-code" placeholder="ZIP code">
+                </div>
+            </div>
+            <div class="payment-label">
+                <a id="return-btn" href="./store.html"> &lt return to store</a>
+                <a id="continue-btn" href="./store.html">continue to shipping</a>
+            </div>
+        </div>
+        <div class="checkout-items">
+
+        </div>
+    </body>
+</html>
