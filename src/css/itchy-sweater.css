@@ -108,6 +108,9 @@ a {
         width: 100%;
     }
     .product select{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         grid-area: 1 / 1 / 2 / 2;
         appearance: none;
         text-align: center;
@@ -124,6 +127,9 @@ a {
         box-shadow: 0 0 .5vw rgba(0, 255, 0, 0.5);
     }
     .product button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         grid-area: 1 / 2 / 2 / 5;
         height: 30px;
         width: 100px;
@@ -230,6 +236,10 @@ a {
         grid-row-gap: 0px;
     }
     .product select{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: center;
         appearance: none;
         grid-area: 1 / 1 / 2 / 2;
         text-align: center;
@@ -246,6 +256,9 @@ a {
         box-shadow: 0 0 .5vw rgba(0, 255, 0, 0.5);
     }
     .product button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         grid-area: 1 / 2 / 2 / 5;
         height: 30px;
         width: 100px;

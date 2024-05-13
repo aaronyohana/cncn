@@ -8,8 +8,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <script>
-        function myFunction() {
+        function dropMenu() {
             document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        function showCart() {
+            document.getElementById("cart-shadow").classList.toggle("show-cart-shadow");
+            document.getElementById("cart-display").classList.toggle("show-cart");
         }
 
         // Close the dropdown menu if the user clicks outside of it
@@ -30,13 +35,12 @@
         <nav>
             <ul>
                 <div class="dropdown">
-                    <button onclick="myFunction()" class="dropbtn"></button>
+                    <button onclick="dropMenu()" class="dropbtn"></button>
                     <div id="myDropdown" class="dropdown-content">
                         <a class="menu-options" href="./index.html">home</a>
                         <a class="menu-options" href="./mag.html">mag</a>
                         <a class="menu-options" href="./store.html">store</a>
                         <a class="menu-options">contact</a>
-                        <a class="menu-options" href="./checkout.html">s</a>
                     </div>
                 </div>
                 <div class="nav1">
@@ -48,7 +52,7 @@
                     <li><a class="menu-title" href="./index.html">cn if i cn bleed</a></li>
                 </div>
                 <div class="nav3">
-                    <li id="shopping-cart"><a class="menu-options" href="./checkout.html">s</a></li>
+                    <li id="shopping-cart"><button onclick="showCart()" class="menu-options" href="./checkout.html">s</button></li>
                     <li id="contact"><a class="menu-options">contact</a></li>
                 </div>
             </ul>
@@ -148,6 +152,37 @@
                 <div class="item-desc">
                     <h3>ITCHY SWEATER</h3>
                     <p>$399.99</p>
+                </div>
+            </div>
+        </div>
+        <div id="cart-shadow">
+            <div id="cart-display" class="cart">
+                <span class="close-cart">
+                    <i class="fas fa-window-close"></i>
+                </span>
+                <h2>your cart</h2>
+                <div class="cart-content">
+                    <!--cart items-->
+                    <div class="cart-item-list">
+                        <div class="cart-item">
+                                <img src="./images/itchy_sweatshirt.jpg">
+                                <div class="cart-item-details">
+                                    <h4>ITCHY SWEATER</h4>
+                                    <h5>$399.99</h5>
+                                </div>
+                                <div class="remove-btn-wrapper">
+                                    <i class="remove-btn"></i>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="cart-footer">
+                        <hr>
+                        <div class="cart-subtotal">
+                            <h4>SUBTOTAL</h4>
+                            <h5>$0</h5>
+                        </div>
+                        <a href="./checkout.html">checkout</a>
+                    </div>
                 </div>
             </div>
         </div>
