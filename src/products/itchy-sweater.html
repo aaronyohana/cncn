@@ -8,8 +8,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <script>
-        function myFunction() {
+        function dropMenu() {
             document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        function showCart() {
+            document.getElementById("cart-shadow").classList.toggle("show-cart-shadow");
+            document.getElementById("cart-display").classList.toggle("show-cart");
         }
 
         // Close the dropdown menu if the user clicks outside of it
@@ -30,7 +35,7 @@
         <nav>
             <ul>
                 <div class="dropdown">
-                    <button onclick="myFunction()" class="dropbtn"></button>
+                    <button onclick="dropMenu()" class="dropbtn"></button>
                     <div id="myDropdown" class="dropdown-content">
                         <a class="menu-options" href="../index.html">home</a>
                         <a class="menu-options" href="../mag.html">mag</a>
@@ -46,25 +51,60 @@
                 <div class="nav2">
                     <li><a class="menu-title" href="../index.html">cn if i cn bleed</a></li>
                 </div>
-                <li class="nav3"><a id="contact" class="menu-options">contact</a></li>
+                <div class="nav3">
+                    <li><button onclick="showCart()" class="cart-btn" class="menu-options" href="./checkout.html">s</button></li>
+                    <li><a id="contact" class="menu-options">contact</a></li>
+                </div>
             </ul>
         </nav>
-        <main>
-            <img class=product-img src="../images/itchy_sweatshirt.jpg">
-            <div class="product">
-                <h1>ITCHY SWEATER</h1>
-                <h3>$399.99</h3>
-                <div class="product-input">
-                    <select>
-                        <option value="small">s</option>
-                        <option value="medium">m</option>
-                        <option value="large">l</option>
-                        <option value="extra-large">xl</option>
-                    </select>
-                    <button>add to cart</button>
+            <div class="product-item">
+                <img class=product-img src="../images/itchy_sweatshirt.jpg">
+                <div class="product">
+                    <h1>ITCHY SWEATER</h1>
+                    <h3>$399.99</h3>
+                    <div class="product-input">
+                        <select>
+                            <option value="small">s</option>
+                            <option value="medium">m</option>
+                            <option value="large">l</option>
+                            <option value="extra-large">xl</option>
+                        </select>
+                        <button>add to cart</button>
+                    </div>
+                    <p></p>
                 </div>
-                <p></p>
             </div>
-        </main>
+        <div id="cart-shadow" class="cart-overlay">
+            <div id="cart-display" class="cart">
+                <span class="close-cart">
+                    <i class="fas fa-window-close"></i>
+                </span>
+                <h2>your cart</h2>
+                <div class="cart-content">
+                    <!--cart items-->
+                    <div class="cart-item-list">
+                        <!--single item-->
+                        <div class="cart-item">
+                                <img src="../images/itchy_sweatshirt.jpg">
+                                <div class="cart-item-details">
+                                    <h4>ITCHY SWEATER</h4>
+                                    <h5>$399.99</h5>
+                                </div>
+                                <div class="remove-btn-wrapper">
+                                    <i class="remove-btn"></i>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="cart-footer">
+                        <hr>
+                        <div class="cart-subtotal">
+                            <h4>SUBTOTAL</h4>
+                            <h5 class="cart-total">$0</h5>
+                        </div>
+                        <a href="../checkout.html">checkout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

@@ -6,6 +6,7 @@
         <title>cncn - store</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="module" src="./js/cart.js"></script>
     </head>
     <script>
         function dropMenu() {
@@ -52,8 +53,8 @@
                     <li><a class="menu-title" href="./index.html">cn if i cn bleed</a></li>
                 </div>
                 <div class="nav3">
-                    <li id="shopping-cart"><button onclick="showCart()" class="menu-options" href="./checkout.html">s</button></li>
-                    <li id="contact"><a class="menu-options">contact</a></li>
+                    <li><button onclick="showCart()" class="cart-btn" class="menu-options" href="./checkout.html">s</button></li>
+                    <li><a id="contact" class="menu-options">contact</a></li>
                 </div>
             </ul>
         </nav>
@@ -155,7 +156,7 @@
                 </div>
             </div>
         </div>
-        <div id="cart-shadow">
+        <div id="cart-shadow" class="cart-overlay">
             <div id="cart-display" class="cart">
                 <span class="close-cart">
                     <i class="fas fa-window-close"></i>
@@ -164,6 +165,7 @@
                 <div class="cart-content">
                     <!--cart items-->
                     <div class="cart-item-list">
+                        <!--single item-->
                         <div class="cart-item">
                                 <img src="./images/itchy_sweatshirt.jpg">
                                 <div class="cart-item-details">
@@ -179,7 +181,7 @@
                         <hr>
                         <div class="cart-subtotal">
                             <h4>SUBTOTAL</h4>
-                            <h5>$0</h5>
+                            <h5 class="cart-total">$0</h5>
                         </div>
                         <a href="./checkout.html">checkout</a>
                     </div>

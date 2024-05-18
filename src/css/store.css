@@ -13,6 +13,7 @@ body {
     overflow: visible;
     background-color: rgb(12, 12, 12);
 }
+/*Navigation General Styling*/
 nav {
     position: sticky;
     top: 0;
@@ -41,7 +42,6 @@ a {
     text-decoration: none;
     color: rgb(249, 242, 234);
 }
-
 .menu-options:hover {
     transition: 300ms;
     background-color: yellow;
@@ -49,6 +49,7 @@ a {
 }
 /* FOR DESKTOP */
 @media screen and (min-width: 551px) {
+    /*Navigation Desktop Styling*/
     .menu-title {
         font-size: 2.2rem;
         font-family: "VT323", monospace;
@@ -74,6 +75,7 @@ a {
     .dropdown {
         visibility: hidden;
     }
+    /*Product Desktop Styling*/
     .items {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr; 
@@ -107,6 +109,7 @@ a {
         font-family: "VT323", monospace;
         text-align: center;
     }
+    /*Cart Desktop Styling*/
     .cart-item {
         height: 100px;
         width: 40vw;
@@ -125,6 +128,7 @@ a {
 }
 /* FOR PHONE */
 @media only screen and (max-width: 550px) {
+    /*Navigation Phone Styling*/
     .menu-title {
         font-size: 1.5rem;
         font-family: "VT323", monospace;
@@ -151,11 +155,11 @@ a {
         border: none;
         cursor: pointer;
         transform: translateY(-5px);
+        z-index: 4;
     }
     #contact {
         visibility: hidden;
     }
-        /* Dropdown Button */
     .dropbtn {
         width: 1.5rem;
         height: 1.5rem;
@@ -164,13 +168,11 @@ a {
         transform: translateY(5px);
         border: none;
         cursor: pointer;
-    }
-    
+    } 
     .dropdown {
         position: relative;
         display: inline-block;
     }
-
     .dropdown-content {
         display: none;
         position: absolute;
@@ -179,8 +181,6 @@ a {
         z-index: 10;
         transform: translateY(10px);
     }
-    
-    /* Links inside the dropdown */
     .dropdown-content a {
         padding-top: 1vh;
         margin-left: 5vw;
@@ -189,13 +189,10 @@ a {
         display: block;
         z-index: 10;
     }
-    
-    /* Change color of dropdown links on hover */
     .dropdown-content a:hover {background-color: yellow;}
-    
-    /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
     .show {display:block;}
 
+    /*Product Phone Styling*/
     .items {
         display: grid;
         grid-template-columns: 1fr 1fr; 
@@ -229,6 +226,7 @@ a {
         font-family: "VT323", monospace;
         text-align: center;
     }
+    /*Cart Phone Styling*/
     #cart-display {
         width: 100%;
         height: 40vh;
@@ -244,6 +242,7 @@ a {
         display: flex;
     }
 }
+/*Product General Styling*/
 .item a {
     grid-area: 1 / 1 / 6 / 5; 
     width: 100%;
@@ -268,17 +267,20 @@ a {
     background-color: yellow;
     transition: 300ms;
 }
+/*Nav General Styling*/
 .nav2 {
     grid-area: 1 / 2 / 2 / 4;
     text-align: center;
 }
 .nav3 button {
+    font-family: "Montagu Slab", serif;
     background-color: var(--black);
     color: var(--white);
     border: none;
     padding: 0;
     cursor: pointer;
 }
+/*Cart General Styling*/
 .show-cart-shadow {
     transition: 300ms;
     background: rgba(12, 12, 12, 0.5);

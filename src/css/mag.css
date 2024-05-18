@@ -7,13 +7,14 @@ body {
     overflow: visible;
     background-color: rgb(12, 12, 12);
 }
+/*Navigation General Styling*/
 nav {
     position: sticky;
     top: 0;
     width: 100vw;
     height: 10vh;
     background-color: rgb(12, 12, 12);
-    z-index: 1;
+    z-index: 3;
 }
 ul {
     display: grid;
@@ -46,6 +47,7 @@ a {
 }
 /* FOR DESKTOP */
 @media screen and (min-width: 551px) {
+    /*Navigation Desktop Styling*/
     .menu-title {
         font-size: 2.2rem;
         font-family: "VT323", monospace;
@@ -61,12 +63,36 @@ a {
         display: flex;
         justify-content: space-between;
     }
+    .nav3 {
+        display: flex;
+        justify-content: flex-end;
+        gap: 2vw;
+        grid-area: 1 / 4 / 2 / 5;
+        padding-right: 5vw;
+    }
     .dropdown {
         visibility: hidden;
+    }
+    /*Cart Desktop Styling*/
+    .cart-item {
+        height: 100px;
+        width: 40vw;
+        display: flex;
+    }
+    #cart-display {
+        right: -50vw;
+        top: 10vh;
+        width: 50%;
+        height: 100%;
+    }
+    @keyframes slide {
+        from { right: -50vw; }
+        to { right: 0; }
     }
 }
 /* FOR PHONE */
 @media only screen and (max-width: 550px) {
+    /*Navigation Phone Styling*/
     .menu-title {
         font-size: 1.5rem;
         font-family: "VT323", monospace;
@@ -82,9 +108,22 @@ a {
         height: 0;
     }
     .nav3 {
+        grid-area: 1 / 4 / 2 / 5;
+        padding-right: 5vw;
+    }
+    #contact {
         visibility: hidden;
     }
-        /* Dropdown Button */
+    .nav3 {
+        position: absolute;
+        right: 5vw;
+        width: 1.5rem;
+        height: 1.5rem;
+        border: none;
+        cursor: pointer;
+        transform: translateY(-5px);
+        z-index: 4;
+    }
     .dropbtn {
         width: 1.5rem;
         height: 1.5rem;
@@ -93,13 +132,11 @@ a {
         transform: translateY(5px);
         border: none;
         cursor: pointer;
-    }
-    
+    }  
     .dropdown {
         position: relative;
         display: inline-block;
     }
-
     .dropdown-content {
         display: none;
         position: absolute;
@@ -108,8 +145,6 @@ a {
         z-index: 1;
         transform: translateY(10px);
     }
-    
-    /* Links inside the dropdown */
     .dropdown-content a {
         padding-top: 1vh;
         margin-left: 5vw;
@@ -117,25 +152,27 @@ a {
         text-decoration: none;
         display: block;
     }
-    
-    /* Change color of dropdown links on hover */
     .dropdown-content a:hover {background-color: yellow;}
-    
-    /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
     .show {display:block;}
+    /*Cart Phone Styling*/
+    #cart-display {
+        width: 100%;
+        height: 40vh;
+        top: -40vh;
+    }
+    @keyframes slide {
+        from { top: -100vh; }
+        to { top: 10vh; }
+    }
+    .cart-item {
+        height: 100px;
+        width: 80vw;
+        display: flex;
+    }
 }
-.nav2 {
-    grid-area: 1 / 2 / 2 / 4;
-    text-align: center;
-}
-.nav3 {
-    display: flex;
-    justify-content: flex-end;
-    gap: 2vw;
-    grid-area: 1 / 4 / 2 / 5;
-    padding-right: 5vw;
-}
+/* FOR DESKTOP */
 @media screen and (min-width: 451px) {
+    /*Pictures Phone Styling*/
     .cover-photo {
         width: 90vw;
         height: 60vh;
@@ -179,6 +216,7 @@ a {
         grid-area: 2 / 1 / 3 / 2;
     }
 }
+/* FOR PHONE */
 @media only screen and (max-width: 450px) {
     .cover-photo {
         width: 90vw;
@@ -215,4 +253,143 @@ a {
         height: 40vh;
     }
 }
-
+/*Navigation General Styling*/
+.nav2 {
+    grid-area: 1 / 2 / 2 / 4;
+    text-align: center;
+}
+.nav3 {
+    grid-area: 1 / 4 / 2 / 5;
+    padding-right: 5vw;
+    text-align: right;
+}
+.nav3 button {
+    font-family: "Montagu Slab", serif;
+    background-color: var(--black);
+    color: var(--white);
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+/*Cart General Styling*/
+.show-cart-shadow {
+    transition: 300ms;
+    background: rgba(12, 12, 12, 0.5);
+    visibility: visible !important;
+}
+.show-cart {
+    animation: slide 500ms forwards;
+}
+#cart-shadow {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    visibility: hidden;
+}
+#cart-display {
+    position: fixed;
+    overflow: scroll;
+    background: var(--black);
+    z-index: 3;
+}
+.cart h2 {
+    text-align: center;
+    color: var(--green);
+    font-size: .75rem;
+    font-family: "Montagu Slab", serif;
+    font-weight: 200;
+    text-shadow: 0 0 2vw rgba(0, 255, 0, 0.5);
+}
+.cart-content {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    z-index: 4;
+}
+.cart-item-list {
+    overflow: scroll;
+}
+.cart-item img {
+    object-fit: contain;
+    height: 100px;
+    width: 100px;
+}
+.cart-item-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 2vw;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: var(--white);
+}
+.cart-item-details h4 {
+    margin: 0;
+    font-size: 1rem;
+    font-family: "VT323", monospace;
+}
+.cart-item-details h5 {
+    margin: 0;
+    font-size: 1rem;
+    font-family: "VT323", monospace;
+}
+.remove-btn-wrapper {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    width: 30px;
+    margin-left: auto;   
+}
+.remove-btn {
+    height: 15px;
+    width: 15px;
+    background-color: #F9F2EA;
+}
+.cart-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 100px;
+}
+.cart-footer hr{
+    width: 100%;
+    border-top: 1px solid var(--white);
+}
+.cart-subtotal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 79%;
+    height: 50px;
+    color: var(--white);
+}
+.cart-subtotal h4{
+    font-size: 1rem;
+    font-family: "VT323", monospace;
+}
+.cart-subtotal h5{
+    font-size: 1rem;
+    font-family: "VT323", monospace;
+}
+.cart-footer a {
+    font-family: "Montagu Slab", serif;
+    font-size: .75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 2rem;
+    color: var(--black);
+    background-color: var(--green);
+    border: 1px solid var(--green);
+    box-shadow: 0 0 2vw rgba(0, 255, 0, 0.5);
+    border-radius: 10px;
+    cursor: pointer;
+}
